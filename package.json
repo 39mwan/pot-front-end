@@ -68,7 +68,7 @@
     "husky": {
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "pre-commit": "lint-staged",
+            "pre-commit": "lint-staged --allow-empty ",
             "post-commit": "git update-index --again",
             "pre-push": "npm run check-types && npm run lint && npm run test --coverage --watchAll=false"
         }
