@@ -12,6 +12,8 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
             }
         )
     }
+    if (true) {
+    }
 }
 
 export default reportWebVitals
