@@ -1,0 +1,69 @@
+.App {
+    /*  align-content: center;*/
+}
+
+body {
+    margin: 0;
+    font-family: var(--secondary-font), sans-serif;
+}
+
+h1,
+h2 {
+    font-family: var(--primary-font);
+}
+
+h1 {
+    font-weight: var(--primary-font-bold-weight);
+}
+
+h2 {
+    font-weight: var(--primary-font-normal-weight);
+}
+
+form {
+    border: var(--primary-color) solid 1px;
+    border-radius: var(--space-xxs);
+    padding: var(--space-lg);
+    width: 30%;
+    display: table;
+    margin: auto;
+}
+
+form div {
+    margin: auto;
+}
+
+label {
+    font: 0.8em var(--secondary-font), sans-serif;
+    font-weight: var(--secondary-font-bold-weight);
+    display: block;
+    padding: 0;
+    width: 80%;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+button {
+    font: 0.8em var(--secondary-font), sans-serif;
+    font-weight: var(--secondary-font-bold-weight);
+    background: var(--primary-color);
+    color: var(--button-color);
+    padding: var(--space-xxs);
+    margin: 0 var(--space-xxs) var(--space-sm);
+}
+
+input,
+textarea {
+    font: 1.4em/1.5em var(--secondary-font), sans-serif;
+    border: var(--primary-color) solid 1px;
+    border-radius: 6px;
+    padding: 0 var(--space-sm);
+    width: 80%;
+    background: none;
+    display: block;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
