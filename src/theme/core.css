@@ -1,69 +1,50 @@
-.App {
-    /*  align-content: center;*/
-}
-
-body {
-    margin: 0;
+:root {
     font-family: var(--secondary-font), sans-serif;
 }
 
+html {
+    background: var(--primary-color);
+}
+
+body {
+    color: var(--black-color);
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
 h1,
-h2 {
-    font-family: var(--primary-font);
+h2,
+h3 {
+    margin: 0;
 }
 
-h1 {
-    font-weight: var(--primary-font-bold-weight);
+a {
+    color: var(--black-color);
+    text-decoration: none;
+    cursor: pointer;
 }
 
-h2 {
-    font-weight: var(--primary-font-normal-weight);
-}
-
-form {
-    border: var(--primary-color) solid 1px;
-    border-radius: var(--space-xxs);
-    padding: var(--space-lg);
-    width: 30%;
-    display: table;
-    margin: auto;
-}
-
-form div {
-    margin: auto;
-}
-
-label {
-    font: 0.8em var(--secondary-font), sans-serif;
-    font-weight: var(--secondary-font-bold-weight);
-    display: block;
-    padding: 0;
-    width: 80%;
-    color: var(--primary-color);
-    text-align: left;
+ul {
+    margin: 0;
 }
 
 button {
-    font: 0.8em var(--secondary-font), sans-serif;
-    font-weight: var(--secondary-font-bold-weight);
-    background: var(--primary-color);
-    color: var(--button-color);
-    padding: var(--space-xxs);
-    margin: 0 var(--space-xxs) var(--space-sm);
+    padding: 0;
+    user-select: auto;
 }
 
-input,
-textarea {
-    font: 1.4em/1.5em var(--secondary-font), sans-serif;
-    border: var(--primary-color) solid 1px;
-    border-radius: 6px;
-    padding: 0 var(--space-sm);
-    width: 80%;
-    background: none;
-    display: block;
+hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    padding: 0;
+    margin: var(--space-xxs) 0;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+input {
+    user-select: auto;
+    line-height: normal;
 }
