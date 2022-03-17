@@ -1,0 +1,50 @@
+:root {
+    font-family: var(--secondary-font), sans-serif;
+}
+
+html {
+    background: var(--primary-color);
+}
+
+body {
+    color: var(--black-color);
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--black-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    user-select: auto;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    padding: 0;
+    margin: var(--space-xxs) 0;
+}
+
+input {
+    user-select: auto;
+    line-height: normal;
+}
