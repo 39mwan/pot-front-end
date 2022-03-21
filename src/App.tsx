@@ -1,26 +1,31 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import { Nav } from './components/layout/navigation/NavBar/NavBarElements'
-import NavBar from './components/layout/navigation/NavBar/NavBar'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-//import AñadirAmigo from './src/views/AñadirAmigo';
+import { Link, Routes, Route } from 'react-router-dom'
+import AnadirAmigo from './views/AnadirAmigo/anadirAmigo'
+import AnadirGasto from './views/AnadirGasto/anadirGasto'
+import Balance from './views/Balance/balance'
+import ListaGastos from './views/ListaGastos/listaGastos'
 
 function App() {
     return (
-        /* <Router>
-            <Navbar />
-            <Switch>
-                <Route path='/' exact component={AñadirAmigo} />
-                <Route path='/about' component={About} />
-                <Route path='/events' component={Events} />
-                <Route path='/annual' component={AnnualReport} />
-                <Route path='/team' component={Teams} />
-                <Route path='/blogs' component={Blogs} />
-                <Route path='/sign-up' component={SignUp} />
-            </Switch>
-        </Router>*/
-        <h1> Hola</h1>
+        <div className="App">
+            <Link to="lista-gasto">Lista gastos</Link>
+            <br />
+            <Link to="balance">Ver balance</Link>
+            <br />
+            <Link to="amigo">Añadir amigo/a</Link>
+            <br />
+            <Link to="gasto">Añadir gasto</Link>
+            <br />
+
+            <Routes>
+                <Route path="/" />
+                <Route path="lista-gasto" element={<ListaGastos />} />
+                <Route path="amigo" element={<AnadirAmigo />} />
+                <Route path="gasto" element={<AnadirGasto />} />
+                <Route path="balance" element={<Balance />} />
+            </Routes>
+        </div>
     )
 }
 
