@@ -1,0 +1,27 @@
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+}
+
+ul li {
+    display: inline-flex;
+    padding-right: 0.7em;
+    margin: var(--space-sm);
+}
+ul li a {
+    background: var(--primary-color);
+    box-sizing: border-box;
+    border-radius: 30px 10px 30px 30px;
+    color: var(--white-color);
+    padding: var(--space-lg);
+    font-family: var(--primary-font);
+    font-weight: var(--primary-font-bold-weight);
+    font-size: 30px;
+}
+@media screen and (max-width: 922px) {
+    ul li a {
+        font-size: 20px;
+    }
+}
