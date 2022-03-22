@@ -1,26 +1,28 @@
 import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
-/*
-export const Nav = styled.nav`
-    background: #63d471;
-    height: 85px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem calc((100vw - 1000px) / 2);
-    z-index: 12;
-    /!* Third Nav *!/
-    /!* justify-content: flex-start; *!/
-`
 
-export const NavLink = styled(Link)`
-    color: #808080;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
-    &.active {
-        color: #000000;
-    }
-`*/
+import './NavBarElements.css'
+
+function Header() {
+    return (
+        <nav>
+            <h1>Gastos compartidos</h1>
+            <ul>
+                <li>
+                    <Link to="lista-gasto">Lista gastos</Link>
+                </li>
+                <li>
+                    <Link to="balance">Ver balance</Link>
+                </li>
+                <li>
+                    <Link to="amigo">Añadir amigo/a</Link>
+                </li>
+                <li>
+                    <Link to="gasto">Añadir gasto</Link>
+                </li>
+            </ul>
+        </nav>
+    )
+}
+
+export default Header

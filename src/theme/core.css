@@ -3,11 +3,14 @@
 }
 
 html {
-    background: var(--primary-color);
+    background: var(--background-color);
+    background-size: cover;
+    height: 100%;
 }
 
 body {
-    color: var(--black-color);
+    height: 100%;
+    margin: 0;
 }
 
 * {
