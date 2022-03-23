@@ -9,7 +9,7 @@ function Body() {
     return (
         <Routes>
             <Route path="/" element={<ListaGastos />} />
-            <Route path="lista-gasto" element={<ListaGastos />} />
+            <Route path="lista-gastos" element={<ListaGastos />} />
             <Route path="amigo" element={<AnadirAmigo />} />
             <Route path="gasto" element={<AnadirGasto />} />
             <Route path="balance" element={<Balance />} />

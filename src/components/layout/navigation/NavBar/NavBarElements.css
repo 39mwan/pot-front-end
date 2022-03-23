@@ -8,20 +8,30 @@ ul {
 ul li {
     display: inline-flex;
     padding-right: 0.7em;
-    margin: var(--space-sm);
+    margin-top: var(--space-xxs);
 }
 ul li a {
     background: var(--primary-color);
     box-sizing: border-box;
     border-radius: 30px 10px 30px 30px;
     color: var(--white-color);
-    padding: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
     font-family: var(--primary-font);
     font-weight: var(--primary-font-bold-weight);
-    font-size: 30px;
+    font-size: 20px;
 }
+
+nav .active {
+    border: solid 3px var(--black-color);
+}
+
+nav h1 {
+    margin-top: var(--space-md);
+    margin-left: var(--space-md);
+}
+
 @media screen and (max-width: 922px) {
     ul li a {
-        font-size: 20px;
+        font-size: 15px;
     }
 }
