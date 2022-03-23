@@ -48,3 +48,7 @@ input[type='submit'] {
     padding: var(--space-xs);
     cursor: pointer;
 }
+
+input[type='submit']:hover {
+    opacity: 0.8;
+}
