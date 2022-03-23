@@ -1,11 +1,8 @@
 import React from 'react'
+import Form from '../../components/layout/Main/Form/Form'
 
 function AnadirAmigo() {
-    return (
-        <>
-            <h1> Aquí puedes añadir amigos a tu lista</h1>
-        </>
-    )
+    return <Form />
 }
 
 export default AnadirAmigo

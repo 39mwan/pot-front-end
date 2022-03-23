@@ -1,0 +1,39 @@
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+form div {
+    width: 80%;
+}
+label {
+    font: 0.8em var(--secondary-font), sans-serif;
+    font-weight: var(--secondary-font-bold-weight);
+    padding: 0;
+    color: var(--primary-color);
+    text-align: left;
+    display: block;
+}
+
+button {
+    font: 0.8em var(--secondary-font), sans-serif;
+    font-weight: var(--secondary-font-bold-weight);
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--space-xxs);
+    margin: 0 var(--space-xxs) var(--space-sm);
+}
+
+input,
+textarea {
+    font: 1.4em/1.5em var(--secondary-font), sans-serif;
+    border: var(--primary-color) solid 1px;
+    border-radius: 6px;
+    padding: 0 var(--space-sm);
+    background: none;
+    width: 100%;
+}

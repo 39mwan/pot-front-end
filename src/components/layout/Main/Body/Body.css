@@ -7,7 +7,7 @@ main div:first-child h2 {
     font-weight: lighter;
 }
 
-main div:nth-child(2) {
+main .container {
     background-color: white;
     border: 1px solid black;
     border-radius: 20px;
