@@ -1,6 +1,5 @@
 form {
     width: 100%;
-    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,8 +41,8 @@ textarea {
 }
 
 input[type='submit'] {
+    font-weight: var(--secondary-font-bold-weight);
     border-radius: 25px;
-    width: 100px;
     background: var(--primary-color);
     color: var(--white-color);
     padding: var(--space-xs);
