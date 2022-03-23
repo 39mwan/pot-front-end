@@ -1,0 +1,13 @@
+main div {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 530px;
+    height: 500px;
+    margin-top: var(--space-lg);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
