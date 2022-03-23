@@ -26,7 +26,9 @@ function Form() {
                     placeholder="Phone Number"
                 />
             </div>
-            <input type="submit" value="Send" id="submit" />
+            <div className="boton">
+                <input type="submit" value="Send" id="submit" />
+            </div>
         </form>
     )
 }

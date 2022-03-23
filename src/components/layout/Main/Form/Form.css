@@ -1,5 +1,6 @@
 form {
     width: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,30 +11,41 @@ form {
 form div {
     width: 80%;
 }
+
 label {
-    font: 0.8em var(--secondary-font), sans-serif;
+    font: 16px var(--secondary-font), sans-serif;
     font-weight: var(--secondary-font-bold-weight);
+    margin-bottom: var(--space-xs);
     padding: 0;
     color: var(--primary-color);
     text-align: left;
     display: block;
 }
 
-button {
-    font: 0.8em var(--secondary-font), sans-serif;
-    font-weight: var(--secondary-font-bold-weight);
-    background: var(--primary-color);
-    color: var(--white-color);
-    padding: var(--space-xxs);
-    margin: 0 var(--space-xxs) var(--space-sm);
+div .boton {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
 }
 
 input,
 textarea {
-    font: 1.4em/1.5em var(--secondary-font), sans-serif;
+    font: 16px var(--secondary-font), sans-serif;
+    font-weight: var(--secondary-font-normal-weight);
     border: var(--primary-color) solid 1px;
     border-radius: 6px;
-    padding: 0 var(--space-sm);
+    padding: var(--space-sm);
+    margin-bottom: var(--space-md);
     background: none;
     width: 100%;
+}
+
+input[type='submit'] {
+    border-radius: 25px;
+    width: 100px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--space-xs);
+    cursor: pointer;
 }
