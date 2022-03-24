@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ListaGastos() {
+function ExpenseList() {
     return (
         <div>
             <h1> Aquí puedes ver los gastos de cada uno</h1>
@@ -8,4 +8,4 @@ function ListaGastos() {
     )
 }
 
-export default ListaGastos
+export default ExpenseList

@@ -1,17 +1,17 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import ListaGastos from '../views/ListaGastos/listaGastos'
-import AnadirAmigo from '../views/AnadirAmigo/anadirAmigo'
-import AnadirGasto from '../views/AnadirGasto/anadirGasto'
-import Balance from '../views/Balance/balance'
+import ExpenseList from '../views/ExpenseList/ExpenseList'
+import AddFriend from '../views/AddFriend/AddFriend'
+import AddExpense from '../views/AddExpense/AddExpense'
+import Balance from '../views/Balance/Balance'
 
 function Body() {
     return (
         <Routes>
-            <Route path="/" element={<ListaGastos />} />
-            <Route path="lista-gastos" element={<ListaGastos />} />
-            <Route path="amigo" element={<AnadirAmigo />} />
-            <Route path="gasto" element={<AnadirGasto />} />
+            <Route path="/" element={<ExpenseList />} />
+            <Route path="expenses" element={<ExpenseList />} />
+            <Route path="friend" element={<AddFriend />} />
+            <Route path="expense" element={<AddExpense />} />
             <Route path="balance" element={<Balance />} />
         </Routes>
     )

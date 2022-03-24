@@ -1,4 +1,4 @@
 export interface LinkProps {
-    nombre: string
-    ruta: string
+    name: string
+    route: string
 }

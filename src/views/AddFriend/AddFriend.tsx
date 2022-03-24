@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AnadirAmigo() {
+function AddFriend() {
     return (
         <div>
             <h1> Aquí puedes añadir amigos a tu lista</h1>
@@ -8,4 +8,4 @@ function AnadirAmigo() {
     )
 }
 
-export default AnadirAmigo
+export default AddFriend
