@@ -5,6 +5,12 @@
     /* COLORS */
     --primary-color: #3d6697;
     --secondary-color: #5e5e5e;
+    --background-color: linear-gradient(
+            115.49deg,
+            #a6c0cf 29.1%,
+            rgba(166, 192, 207, 0) 99.05%
+        )
+        no-repeat;
     --black-color: black;
     --white-color: white;
     --background-color: linear-gradient(
