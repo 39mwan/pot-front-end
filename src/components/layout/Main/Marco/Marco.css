@@ -1,0 +1,34 @@
+div .gasto {
+    display: flex;
+    width: 95%;
+    height: 98px;
+    border: solid 2px var(--primary-color);
+    border-radius: 20px;
+    padding: var(--space-sm);
+    margin: var(--space-sm);
+    justify-content: space-between;
+    align-items: center;
+}
+
+div h3 {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
+
+div .precioynombre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 var(--space-md);
+}
+
+.labelprecio {
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: var(--secondary-font-bold-weight);
+}
+
+.labelprecio::after {
+    content: ' €';
+}

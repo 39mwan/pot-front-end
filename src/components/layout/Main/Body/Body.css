@@ -1,4 +1,4 @@
-main div:first-child {
+main .recuadro {
     margin-top: var(--space-lg);
 }
 

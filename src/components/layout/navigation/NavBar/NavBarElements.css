@@ -21,6 +21,9 @@ ul li a {
     font-size: 20px;
 }
 
+ul li a:hover {
+    opacity: 0.8;
+}
 nav .active {
     border: solid 3px var(--black-color);
 }

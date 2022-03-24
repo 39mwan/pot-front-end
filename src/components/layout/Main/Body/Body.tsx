@@ -31,7 +31,7 @@ function Body() {
 
     return (
         <main>
-            <div>
+            <div className="recuadro">
                 <h2>
                     <Title />
                 </h2>
