@@ -1,33 +1,31 @@
 import React from 'react'
 import './Form.css'
+import type { FieldsProps, ArrayFields } from 'types/fields'
 
-function Form() {
+function Form(propsPrincipal: ArrayFields) {
+    function FormField(props: FieldsProps) {
+        return (
+            <div>
+                <label>{props.nombre}</label>
+                <input type={props.tipo} />
+            </div>
+        )
+    }
+
     return (
         <form action="">
-            <div>
-                <label htmlFor="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Name" />
+            {propsPrincipal.campos.map((field: FieldsProps) => (
+                <>
+                    {' '}
+                    <FormField nombre={field.nombre} tipo={field.tipo} />{' '}
+                </>
+            ))}
+
+            <div className="boton">
+                <input type="submit" value={propsPrincipal.boton} id="submit" />
             </div>
-            <div>
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                />
-            </div>
-            <div>
-                <label htmlFor="phone">Phone</label>
-                <input
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    placeholder="Phone Number"
-                />
-            </div>
-            <input type="submit" value="Send" id="submit" />
         </form>
     )
 }
+
 export default Form

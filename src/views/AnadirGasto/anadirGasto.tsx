@@ -1,10 +1,15 @@
 import React from 'react'
+import type { FieldsProps } from 'types/fields'
+import Form from '../../components/layout/Main/Form/Form'
 
 function AnadirGasto() {
-    return (
-        <>
-            <h1> Aquí puedes añadir gastos a tu lista</h1>
-        </>
-    )
+    const campos: FieldsProps[] = [
+        { nombre: 'De', tipo: 'text' },
+        { nombre: 'Cantidad', tipo: 'number' },
+        { nombre: 'Descripcion', tipo: 'text' },
+        { nombre: 'Fecha', tipo: 'date' },
+    ]
+
+    return <Form campos={campos} boton="Añadir gasto" />
 }
 export default AnadirGasto
