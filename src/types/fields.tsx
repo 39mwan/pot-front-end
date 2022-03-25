@@ -5,5 +5,7 @@ export interface FieldsProps {
 
 export interface ArrayFields {
     campos: FieldsProps[]
+    input_names: string[]
+    url: string
     boton: string
 }

@@ -9,7 +9,15 @@ function AnadirGasto() {
         { nombre: 'Descripcion', tipo: 'text' },
         { nombre: 'Fecha', tipo: 'date' },
     ]
+    const field_input: string[] = ['friend_id', 'amount', 'description', 'date']
 
-    return <Form campos={campos} boton="Añadir gasto" />
+    return (
+        <Form
+            campos={campos}
+            input_names={field_input}
+            url="localhost:8080/api/v1/expenses"
+            boton="Añadir gasto"
+        />
+    )
 }
 export default AnadirGasto

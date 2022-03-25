@@ -1,0 +1,17 @@
+
+const url = "http://localhost:8080/postRequest"
+const jsonData = {}
+jsonData.email = email;
+jsonData.password = password;
+jsonData.confirmPassword = confirmPassword;
+jsonData.security = securityArr;
+
+fetchOptions.body = JSON.stringify(jsonData);
+
+fetch(url,fetchOptions)
+    .then((response)=>{
+        return response.json();
+    })
+    .then((result)=>{
+        console.log("result");
+    })*/
