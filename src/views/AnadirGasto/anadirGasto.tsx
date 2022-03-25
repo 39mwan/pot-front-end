@@ -1,6 +1,6 @@
 import React from 'react'
 import type { FieldsProps } from 'types/fields'
-import Form from '../../components/layout/Main/Form/Form'
+import Form from '../../components/layout/Main/Form/FriendForm'
 
 function AnadirGasto() {
     const campos: FieldsProps[] = [

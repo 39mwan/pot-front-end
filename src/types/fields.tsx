@@ -1,3 +1,5 @@
+import { ChangeEventHandler } from 'react'
+
 export interface FieldsProps {
     nombre: string
     tipo: string

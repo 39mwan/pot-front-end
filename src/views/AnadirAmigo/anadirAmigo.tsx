@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../../components/layout/Main/Form/Form'
+import FriendForm from '../../components/layout/Main/Form/FriendForm'
 import type { FieldsProps } from 'types/fields'
 
 function AnadirAmigo() {
@@ -10,7 +10,7 @@ function AnadirAmigo() {
     const field_input: string[] = ['name', 'surname']
 
     return (
-        <Form
+        <FriendForm
             campos={campos}
             url="hola"
             input_names={field_input}
