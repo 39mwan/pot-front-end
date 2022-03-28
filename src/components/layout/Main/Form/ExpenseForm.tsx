@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import './Form.css'
-import type { FieldsProps, ArrayFields } from 'types/fields'
-import { useLocation } from 'react-router-dom'
+import type { ArrayFields } from 'types/fields'
 
 function ExpenseForm(propsPrincipal: ArrayFields) {
-    const [friend_id, setFriend_id] = useState('')
+    const [friend, setFriend] = useState('')
     const [amount, setAmount] = useState('')
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
 
     const onFriendIdChange = (e: React.FormEvent<HTMLInputElement>) => {
-        setFriend_id(e.currentTarget.value)
+        setFriend(e.currentTarget.value)
     }
 
     const onAmountChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -27,7 +26,7 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
 
     const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault()
-        const data = { friend_id, amount, description, date }
+        const data = { friend, amount, description, date }
         const requestOptions = {
             method: 'POST',
             requestMode: 'no-cors',
