@@ -4,18 +4,18 @@ import type { MarcoFields } from 'types/marco'
 
 function ListaGastos() {
     const [data, setData] = useState<MarcoFields[]>([])
+    const [friends, setFriends] = useState<MarcoFields[]>([])
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/v1/expenses')
-            .then((response) => {
-                return response.json()
-            })
-            .then((data1) => setData(data1))
-    })
+        const fetchData = async () => {
+            const result = await fetch('http://localhost:8080/api/v1/expenses')
+            const body = await result.json()
+            setData(body)
+        }
+        fetchData()
+    }, [])
 
-    if (data) {
-        console.log(data[0])
-    }
+    console.log(data[0])
 
     return (
         <div>
