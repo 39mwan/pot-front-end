@@ -1,32 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Marco from '../../components/layout/Main/Marco/Marco'
 import type { MarcoFields } from 'types/marco'
 
 function ListaGastos() {
-    const listaMarcos: MarcoFields[] = [
-        {
-            nombre: 'Sonia Zhang',
-            precio: 30,
-            descripcion: 'taxi',
-            fecha: new Date('2022-11-12').toLocaleDateString('es-ES'),
-        },
-        {
-            nombre: 'Sonia  Zhang',
-            precio: 30,
-            descripcion: 'taxi',
-            fecha: new Date('2022-11-12').toLocaleDateString('es-ES'),
-        },
-        {
-            nombre: 'Sonia  Zhang',
-            precio: 30,
-            descripcion: 'taxi',
-            fecha: new Date('12-11-2022').toLocaleDateString('es-ES'),
-        },
-    ]
+    const [data, setData] = useState<MarcoFields[]>([])
+
+    useEffect(() => {
+        fetch('http://localhost:8080/api/v1/expenses')
+            .then((response) => {
+                return response.json()
+            })
+            .then((data1) => setData(data1))
+    })
+
+    if (data) {
+        console.log(data[0])
+    }
 
     return (
         <div>
-            <Marco listaMarcos={listaMarcos} />
+            <Marco listaMarcos={data} />
         </div>
     )
 }

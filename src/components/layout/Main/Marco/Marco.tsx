@@ -8,11 +8,11 @@ export default function ListaMarco(propsPrincipal: ListaMarcos) {
         return (
             <div className="gasto">
                 <div className="precioynombre">
-                    <h3 className="labelprecio">{props.precio}</h3>
-                    <h3>{props.nombre}</h3>
+                    <h3 className="labelprecio">{props.amount}</h3>
+                    <h3>{props.friend}</h3>
                 </div>
-                <h3>{props.descripcion}</h3>
-                <h3>{props.fecha}</h3>
+                <h3>{props.description}</h3>
+                <h3>{props.date}</h3>
             </div>
         )
     }
@@ -22,10 +22,10 @@ export default function ListaMarco(propsPrincipal: ListaMarcos) {
             {propsPrincipal.listaMarcos.map((marco: MarcoFields) => (
                 <>
                     <Marco
-                        nombre={marco.nombre}
-                        precio={marco.precio}
-                        descripcion={marco.descripcion}
-                        fecha={marco.fecha}
+                        friend={marco.friend}
+                        amount={marco.amount}
+                        description={marco.description}
+                        date={marco.date}
                     />{' '}
                 </>
             ))}

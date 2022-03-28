@@ -1,8 +1,8 @@
 export interface MarcoFields {
-    nombre: string
-    precio: number
-    descripcion: string
-    fecha: string
+    friend: number
+    amount: number
+    description: string
+    date: string
 }
 
 export interface ListaMarcos {
