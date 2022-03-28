@@ -30,7 +30,8 @@ div .boton {
 }
 
 input,
-textarea {
+textarea,
+select {
     font: 16px var(--secondary-font), sans-serif;
     font-weight: var(--secondary-font-normal-weight);
     border: var(--primary-color) solid 1px;

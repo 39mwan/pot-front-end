@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Form.css'
 import type { ArrayFields } from 'types/fields'
+import { friendProps } from '../../../../types/friendProps'
 
 function ExpenseForm(propsPrincipal: ArrayFields) {
     const [friend, setFriend] = useState('')
@@ -8,7 +9,19 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
 
-    const onFriendIdChange = (e: React.FormEvent<HTMLInputElement>) => {
+    //friendList from server
+    const [friends, setFriends] = useState<friendProps[]>([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch('http://localhost:8080/api/v1/friend')
+            const body = await result.json()
+            setFriends(body)
+        }
+        fetchData()
+    }, [])
+
+    const onFriendIdChange = (e: React.FormEvent<HTMLSelectElement>) => {
         setFriend(e.currentTarget.value)
     }
 
@@ -45,12 +58,21 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
 
         console.log(JSON.stringify(data))
     }
+
+    console.log(friends)
+
     return (
         <>
             <form id="text">
                 <div>
-                    <label>Amigo</label>
-                    <input type="text" onChange={onFriendIdChange} />
+                    <label>De:</label>
+                    <select onChange={onFriendIdChange}>
+                        {friends.map((f: friendProps) => (
+                            <>
+                                <option value={f.id}> {f.name}</option>{' '}
+                            </>
+                        ))}
+                    </select>
                 </div>
 
                 <div>
