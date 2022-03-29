@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import ListaGastos from '../../../../views/ListaGastos/listaGastos'
-import AnadirAmigo from '../../../../views/AnadirAmigo/anadirAmigo'
-import AnadirGasto from '../../../../views/AnadirGasto/anadirGasto'
-import Balance from '../../../../views/Balance/balance'
 
 import './Body.css'
+import ExpenseList from '../../../../views/ExpenseList/ExpenseList'
+import AddFriend from '../../../../views/AddFriend/AddFriend'
+import AddExpense from '../../../../views/AddExpense/AddExpense'
+import Balance from '../../../../views/Balance/Balance'
 
 function Body() {
     const location = useLocation()
@@ -13,13 +13,13 @@ function Body() {
     function Title() {
         let pageName
         switch (location.pathname) {
-            case '/lista-gastos':
+            case '/expenses':
                 pageName = 'LISTA DE GASTOS'
                 break
-            case '/amigo':
+            case '/friend':
                 pageName = 'AÑADIR AMIGO/A'
                 break
-            case '/gasto':
+            case '/expense':
                 pageName = 'AÑADIR GASTO'
                 break
             case '/balance':
@@ -37,10 +37,10 @@ function Body() {
                 </h2>
                 <div className="container">
                     <Routes>
-                        <Route path="/" element={<ListaGastos />} />
-                        <Route path="lista-gastos" element={<ListaGastos />} />
-                        <Route path="amigo" element={<AnadirAmigo />} />
-                        <Route path="gasto" element={<AnadirGasto />} />
+                        <Route path="/" element={<ExpenseList />} />
+                        <Route path="expenses" element={<ExpenseList />} />
+                        <Route path="friend" element={<AddFriend />} />
+                        <Route path="expense" element={<AddExpense />} />
                         <Route path="balance" element={<Balance />} />
                     </Routes>
                 </div>
