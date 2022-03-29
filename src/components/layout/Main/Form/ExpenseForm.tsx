@@ -69,7 +69,10 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
                     <select onChange={onFriendIdChange}>
                         {friends.map((f: friendProps) => (
                             <>
-                                <option value={f.id}> {f.name}</option>{' '}
+                                <option value={f.id}>
+                                    {' '}
+                                    {f.name} {f.surname}
+                                </option>{' '}
                             </>
                         ))}
                     </select>
