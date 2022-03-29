@@ -16,7 +16,7 @@ export default function ListaMarco(propsPrincipal: ListaMarcos) {
         const fetchData = async () => {
             const result = await fetch('http://localhost:8080/api/v1/friend')
             const body = await result.json()
-            setFriendsList(body)
+            if (body != null) setFriendsList(body)
         }
         fetchData()
     }, [])
