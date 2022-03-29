@@ -20,7 +20,9 @@
 
 .idea/
 
-.husky/.gitignore
+.husky/_
+.husky/_/husky.sh
+
 
 npm-debug.log*
 yarn-debug.log*

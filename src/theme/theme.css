@@ -13,6 +13,11 @@
         no-repeat;
     --black-color: black;
     --white-color: white;
+    --background-color: linear-gradient(
+        115.49deg,
+        #a6c0cf 29.1%,
+        var(--primary-color) 99.05%
+    );
 
     /* FONTS and WEIGHTS*/
     --primary-font: 'Sora';
