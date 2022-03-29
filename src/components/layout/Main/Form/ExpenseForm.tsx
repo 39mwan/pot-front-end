@@ -4,25 +4,25 @@ import type { ArrayFields } from 'types/fields'
 import { friendProps } from '../../../../types/friendProps'
 
 function ExpenseForm(propsPrincipal: ArrayFields) {
-    const [friend, setFriend] = useState('')
+    const [friendId, setFriendId] = useState('')
     const [amount, setAmount] = useState('')
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
 
     //friendList from server
-    const [friends, setFriends] = useState<friendProps[]>([])
+    const [friendsList, setFriendsList] = useState<friendProps[]>([])
 
     useEffect(() => {
         const fetchData = async () => {
             const result = await fetch('http://localhost:8080/api/v1/friend')
             const body = await result.json()
-            setFriends(body)
+            setFriendsList(body)
         }
         fetchData()
     }, [])
 
     const onFriendIdChange = (e: React.FormEvent<HTMLSelectElement>) => {
-        setFriend(e.currentTarget.value)
+        setFriendId(e.currentTarget.value)
     }
 
     const onAmountChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -39,7 +39,7 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
 
     const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault()
-        const data = { friend, amount, description, date }
+        const data = { friend: friendId, amount, description, date }
         const requestOptions = {
             method: 'POST',
             requestMode: 'no-cors',
@@ -59,7 +59,7 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
         console.log(JSON.stringify(data))
     }
 
-    console.log(friends)
+    console.log(friendsList)
 
     return (
         <>
@@ -67,7 +67,7 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
                 <div>
                     <label>De:</label>
                     <select onChange={onFriendIdChange}>
-                        {friends.map((f: friendProps) => (
+                        {friendsList.map((f: friendProps) => (
                             <>
                                 <option value={f.id}>
                                     {' '}
