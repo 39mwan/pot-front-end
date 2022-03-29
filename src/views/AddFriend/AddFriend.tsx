@@ -2,7 +2,7 @@ import React from 'react'
 import FriendForm from '../../components/layout/Main/Form/FriendForm'
 import type { FieldsProps } from 'types/fields'
 
-function AnadirAmigo() {
+function AddFriend() {
     const campos: FieldsProps[] = [
         { nombre: 'Nombre', tipo: 'text' },
         { nombre: 'Apellidos', tipo: 'text' },
@@ -19,4 +19,4 @@ function AnadirAmigo() {
     )
 }
 
-export default AnadirAmigo
+export default AddFriend

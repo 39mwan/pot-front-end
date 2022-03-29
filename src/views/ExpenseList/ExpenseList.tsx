@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Marco from '../../components/layout/Main/Marco/Marco'
 import type { MarcoFields } from 'types/marco'
 
-function ListaGastos() {
+function ExpenseList() {
     const [data, setData] = useState<MarcoFields[]>([])
     const [friends, setFriends] = useState<MarcoFields[]>([])
 
@@ -24,4 +24,4 @@ function ListaGastos() {
     )
 }
 
-export default ListaGastos
+export default ExpenseList

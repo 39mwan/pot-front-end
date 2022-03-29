@@ -9,7 +9,7 @@ function Header() {
     function NavLink(props: LinkProps) {
         return (
             <li>
-                <Link to={props.ruta}>{props.nombre}</Link>
+                <Link to={props.route}>{props.name}</Link>
             </li>
         )
     }
@@ -18,10 +18,10 @@ function Header() {
         <nav>
             <h1>Gastos compartidos</h1>
             <ul>
-                <NavLink ruta="lista-gastos" nombre="Lista gastos" />
-                <NavLink ruta="balance" nombre="Ver balance" />
-                <NavLink ruta="amigo" nombre="Añadir amigo/a" />
-                <NavLink ruta="gasto" nombre="Añadir gasto" />
+                <NavLink route="expenses" name="Lista gastos" />
+                <NavLink route="balance" name="Ver balance" />
+                <NavLink route="friend" name="Añadir amigo/a" />
+                <NavLink route="expense" name="Añadir gasto" />
             </ul>
         </nav>
     )

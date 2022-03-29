@@ -2,7 +2,7 @@ import React from 'react'
 import type { FieldsProps } from 'types/fields'
 import Form from '../../components/layout/Main/Form/ExpenseForm'
 
-function AnadirGasto() {
+function AddExpense() {
     const campos: FieldsProps[] = [
         { nombre: 'De', tipo: 'text' },
         { nombre: 'Cantidad', tipo: 'number' },
@@ -20,4 +20,4 @@ function AnadirGasto() {
         />
     )
 }
-export default AnadirGasto
+export default AddExpense
