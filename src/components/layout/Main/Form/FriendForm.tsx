@@ -56,7 +56,11 @@ function FriendForm(propsPrincipal: ArrayFields) {
             body: JSON.stringify(data),
         }
         fetch('http://localhost:8080/api/v1/friend', requestOptions)
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.ok) alert('Añadido correctamente')
+                else alert('Ha ocurrido un error por favor inténtalo de nuevo')
+                response.json()
+            })
             .then((res) => console.log(res))
         console.log(JSON.stringify(data))
     }

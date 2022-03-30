@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import swal from 'sweetalert2'
 import './Form.css'
 import type { ArrayFields } from 'types/fields'
 import { friendProps } from '../../../../types/friendProps'
 
 function ExpenseForm(propsPrincipal: ArrayFields) {
-    const [friendId, setFriendId] = useState('')
+    const [friendId, setFriendId] = useState('2')
     const [amount, setAmount] = useState('')
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
@@ -52,7 +53,12 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
         console.log(data)
 
         fetch('http://localhost:8080/api/v1/expenses', requestOptions)
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.ok) {
+                    swalAlert('Gasto añadido correctamente')
+                    response.json()
+                } else alert('Ha ocurrido un error inténtalo de nuevo')
+            })
             .then((response) => console.log(response))
             .then((res) => console.log(res))
 
@@ -104,6 +110,15 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
             </form>
         </>
     )
+}
+function swalAlert(message: string) {
+    swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Añadido correctamente',
+        showConfirmButton: false,
+        timer: 1500,
+    })
 }
 
 export default ExpenseForm
