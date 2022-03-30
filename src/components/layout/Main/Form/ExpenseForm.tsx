@@ -74,12 +74,9 @@ function ExpenseForm(propsPrincipal: ArrayFields) {
                     <label>De:</label>
                     <select onChange={onFriendIdChange}>
                         {friendsList.map((f: friendProps) => (
-                            <>
-                                <option value={f.id}>
-                                    {' '}
-                                    {f.name} {f.surname}
-                                </option>{' '}
-                            </>
+                            <option value={f.id} key={f.id}>
+                                {f.name} {f.surname}
+                            </option>
                         ))}
                     </select>
                 </div>
