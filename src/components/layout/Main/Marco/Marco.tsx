@@ -55,14 +55,13 @@ export default function ListaMarco(propsPrincipal: ListaMarcos) {
     return (
         <>
             {propsPrincipal.listaMarcos.map((marco: MarcoFields) => (
-                <>
-                    <Marco
-                        friend={marco.friend}
-                        amount={marco.amount}
-                        description={marco.description}
-                        date={marco.date}
-                    />{' '}
-                </>
+                <Marco
+                    key={Math.random()}
+                    friend={marco.friend}
+                    amount={marco.amount}
+                    description={marco.description}
+                    date={marco.date}
+                />
             ))}
         </>
     )
